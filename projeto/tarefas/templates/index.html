@@ -1,0 +1,37 @@
+{% load static %} <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Gerenciador de Tarefas</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head> 
+   <body>
+    <div class="container_tarefas">
+        
+        <ul class="lista_tarefas">
+            
+            {% for tarefa in lista_de_tarefas %}
+            
+                <li class="item_tarefa"> 
+                    
+                    <div class="titulo_tarefa">
+                        <h3>{{ tarefa.titulo_tarefa }}</h3>
+                    </div>
+
+                    <div class="descricao_tarefa">
+                        <p>{{ tarefa.descricao_tarefa }}</p>
+                    </div>
+
+                    <div class="data_tarefa">
+                        <p>{{ tarefa.data_tarefa }}</p>
+                    </div>
+
+                </li>
+            {% endfor %}
+
+        </ul> </div>
+    </body>
+</html>
